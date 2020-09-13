@@ -4,8 +4,8 @@ void stf(int debug);
 int debug = 0;
 int main() {
     printf("----------\nWelcome To DiagBootX - DuffyAPP-IT\n----------\n");
-    printf("Please Choose An Option:\n"
-           "1\tBoot\n"
+    printf("Please Choose An Option:\n(Start These Processes From DFU)"
+           "1\tEnable Virtual Serial\n"
            "2\tQuick Boot\n"
            "3\tSet Up Serial Only\n"
            "4\tHelp\n"

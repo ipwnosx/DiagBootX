@@ -34,11 +34,11 @@ void StF(int debug);
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
         //do your work in the background here
-        sleep(5);
+        sleep(3);
         system("cd ~/Downloads/DiagBootX/Assets/;ls;./ipwndfu -p >/dev/null 2>&1");
         dispatch_async(dispatch_get_main_queue(), ^{
             //tell the main UI thread here
-            self->_Debug.stringValue = @"Working";
+            self->_Debug.stringValue = @"Entering PWNED-DFU";
         });
     });
     //Patch Bootchain
@@ -51,7 +51,7 @@ void StF(int debug);
         system("cd ~/Downloads/DiagBootX/Assets/;ls;./ipwndfu --patch >/dev/null 2>&1");
         dispatch_async(dispatch_get_main_queue(), ^{
             //tell the main UI thread here
-            self->_Debug.stringValue = @"Working";
+            self->_Debug.stringValue = @"Patching Bootchain";
         });
     });
     //Send iBSS
@@ -59,7 +59,7 @@ void StF(int debug);
     dispatch_async(queue2, ^{
         //do your work in the background here
         sleep(15);
-        system("cd ~/Downloads/DiagBootX/Assets/;ls;./irecovery -f ibss.img4 >/dev/null 2>&1");
+        system("cd ~/Downloads/DiagBootX/Assets/;ls;./irecovery -f iboot.img4 >/dev/null 2>&1");
         dispatch_async(dispatch_get_main_queue(), ^{
             //tell the main UI thread here
             self->_Debug.stringValue = @"Working";
