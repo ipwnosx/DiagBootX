@@ -52,4 +52,3 @@ This project wasn't intended for public release but due to some requests, I have
 | ------ | ------ |
 | Personal Website | https://duffy.app |
 | GitHub | https://github.com/DuffyAPP-IT |
-| Email Address | james@duffy.app |
